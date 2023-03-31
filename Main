@@ -1,0 +1,33 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+    System.out.println("Enter the number: ");
+
+    int a = scan.nextInt();
+    double NewTotal = 0;
+    double Total = 1;
+    double NewTotal1 = Total + 0.5;
+    if(a==1 || a==2){
+        switch (a){
+            case 1:
+                System.out.println("The number you have entered is equal to: "+a+" and  Harmonik number is equal to: "+Total);
+                break;
+            case 2:
+                System.out.println("The number you have entered is equal to: "+a+" and Harmonik number is equal to: "+ NewTotal1);
+                break;
+        }
+    }
+    else {
+        for(double i = 2; i<=a;i++){
+            NewTotal +=  (Total + (1/i));
+            System.out.println("Harmonik number is equal to" + NewTotal);
+        }
+
+    }
+    }
+}
